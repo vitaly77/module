@@ -1,0 +1,38 @@
+.button_scroll_up {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+    width: 7em;
+    text-align: center;
+    cursor: pointer;
+    background: rgba(239, 246, 255, 0.6);
+
+    -webkit-transition: opacity 0.7s;
+    -ms-transition: opacity 0.7s;
+    -o-transition: opacity 0.7s;
+    -moz-transition: opacity 0.7s;
+    transition: opacity 0.7s;
+}
+
+.button_scroll_up:hover {
+    opacity: 1;
+    box-shadow: 1px 1px 5px #999;
+}
+
+.button_scroll_up__hidden {
+    display: none;
+}
+
+@media screen and (min-width: 400px) and (max-width: 900px) {
+    .button_scroll_up {
+        width: 4em;
+    }
+}
+
+@media screen and (max-width: 399px) {
+    .button_scroll_up {
+        display: none;
+    }
+}
