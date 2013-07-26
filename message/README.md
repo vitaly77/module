@@ -16,8 +16,7 @@
 
 Инициализируется по событию DOMContentLoaded
 Ожидает наличие следующего кода на HTML в документе:
-<pre>
-<code>
+<pre><code>
 &lt;table cellspacing="0" cellpadding="0" class="message_table hidden" id="js_message_table">
     &lt;tr class="message_tr">
         &lt;td class="message_td">
@@ -31,5 +30,4 @@
         &lt;/td>
     &lt;/tr>
 &lt;/table>
-</code>
-</pre>
+</code></pre>

@@ -1,8 +1,7 @@
 # Выпадающее меню на CSS
 
 Никаких скриптов, просто подключите CSS и вставьте код на HTML:
-<pre>
-<code>
+<pre><code>
 &lt;div class="menu_pull_down_container">
     &lt;div class="menu_pull_down_table">
         &lt;div class="menu_pull_down_item">
@@ -18,5 +17,4 @@
         &lt;/div>
     &lt;/div>
 &lt;/div>
-</code>
-</pre>
+</code></pre>

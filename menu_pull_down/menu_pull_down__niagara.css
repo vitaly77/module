@@ -1,0 +1,32 @@
+﻿.menu_pull_down_text {
+    color: white;
+}
+
+.menu_pull_down_list,
+.menu_pull_down_item:hover {
+    background: #D3ECFD;
+}
+
+.menu_pull_down_item,
+.menu_pull_down_list_item:hover {
+    background: #AAB3CF;
+}
+
+.menu_pull_down_list_item {
+    border-top: 1px solid #AAB3CF;
+}
+
+.menu_pull_down_list,
+.menu_pull_down_list_item,
+.menu_pull_down_item:hover,
+.menu_pull_down_text:hover {
+    color: black;
+}
+
+.menu_pull_down_list {
+	width: 15em;
+}
+
+.menu_pull_down_list_item {
+	white-space: nowrap;
+}
