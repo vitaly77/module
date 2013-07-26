@@ -1,0 +1,54 @@
+.context_menu_table {
+    display: table;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.context_menu_tr {
+    display: table-row;
+}
+
+.context_menu_td {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.context_menu_item {
+    margin: 0.5em auto;
+    width: 100%;
+    max-width: 10em;
+    font-size: 2em;
+    padding: 1em 2em;
+    cursor: pointer;
+    text-align: center;
+}
+
+@media screen and (min-width: 500px) and (max-width: 960px) {
+    .context_menu_td {
+        font-size: 70%;
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 500px) {
+    .context_menu_td {
+        font-size: 60%;
+    }
+}
+
+@media screen  and (max-width: 300px) {
+    .context_menu_td {
+        font-size: 40%;
+    }
+
+    .context_menu_item {
+        max-width: 12em;
+    }
+}
+
+
