@@ -22,21 +22,25 @@
 </pre>
 
 Вернет объект меню с двумя методами и одним свойством:
+<pre>
 show - покажет меню
 hide - скроет меню
 node - указатель на DOM элемент меню
+</pre>
 
 Пример:
-<code>
+<pre>
 var myMenu = contextMenu(данные_для_создания_меню);
 myMenu.show();
 myMenu.hide();
 myMenu.node.appendChild(DOM_элемент);
-</code>
+</pre>
 
 Модуль требует наличия в документе следующего HTML кода:
+<pre>
 <div class="context_menu_table" id="context_menu_table">
     <div class="context_menu_tr">
         <div class="context_menu_td" id="context_menu_td"></div>
     </div>
 </div>
+</pre>
