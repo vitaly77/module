@@ -18,18 +18,18 @@
 Ожидает наличие следующего кода на HTML в документе:
 <pre>
 <code>
-<table cellspacing="0" cellpadding="0" class="message_table hidden" id="js_message_table">
-    <tr class="message_tr">
-        <td class="message_td">
-            <div class="message_container" id="js_message_container">
-                <div class="message_close" id="js_message_close">x</div>
-                <div class="message_info" id="js_message_info"></div>
-                <div class="message_options hidden" id="js_message_options"></div>
-                <div class="message_button hidden" id="js_message_ok">Ok</div>
-                <div class="message_button hidden" id="js_message_cancel">Cancel</div>
-            </div>
-        </td>
-    </tr>
-</table>
+&lt;table cellspacing="0" cellpadding="0" class="message_table hidden" id="js_message_table">
+    &lt;tr class="message_tr">
+        &lt;td class="message_td">
+            &lt;div class="message_container" id="js_message_container">
+                &lt;div class="message_close" id="js_message_close">x&lt;/div>
+                &lt;div class="message_info" id="js_message_info">&lt;/div>
+                &lt;div class="message_options hidden" id="js_message_options">&lt;/div>
+                &lt;div class="message_button hidden" id="js_message_ok">Ok&lt;/div>
+                &lt;div class="message_button hidden" id="js_message_cancel">Cancel&lt;/div>
+            &lt;/div>
+        &lt;/td>
+    &lt;/tr>
+&lt;/table>
 </code>
 </pre>
