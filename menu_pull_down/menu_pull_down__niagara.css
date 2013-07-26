@@ -22,11 +22,3 @@
 .menu_pull_down_text:hover {
     color: black;
 }
-
-.menu_pull_down_list {
-	width: 15em;
-}
-
-.menu_pull_down_list_item {
-	white-space: nowrap;
-}
