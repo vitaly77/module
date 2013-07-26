@@ -2,6 +2,7 @@
 
 Никаких скриптов, просто подключите CSS и вставьте код на HTML:
 <pre>
+<code>
 <div class="menu_pull_down_container">
     <div class="menu_pull_down_table">
         <div class="menu_pull_down_item">
@@ -17,4 +18,5 @@
         </div>
     </div>
 </div>
+</code>
 </pre>
