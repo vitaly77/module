@@ -1,48 +1,51 @@
 /*
- * РњРѕРґСѓР»СЊ РґР»СЏ РєРѕРЅС‚РµРєСЃС‚РЅРѕРіРѕ РјРµРЅСЋ.
- * РџСЂРё РёРЅРёС†РёР»РёР·Р°С†РёРё РѕР¶РёРґР°РµС‚ РґР°РЅРЅС‹Рµ РІ РІРёРґРµ:
+ * Модуль для контекстного меню.
+ * При иницилизации ожидает данные в виде:
  * {
- *     id: "id_РјРµРЅСЋ",
+ *     id: "id_меню",
  *     items: [
  *         {
- *             title: "РўРµРєСЃС‚ РЅР° РєРЅРѕРїРєРµ",
- *             link: "СЃСЃС‹Р»РєР°, РєРѕС‚РѕСЂР°СЏ РѕС‚СЂР°Р±РѕС‚Р°РµС‚ РїСЂРё РЅР°Р¶Р°С‚РёРё",
+ *             title: "Текст на кнопке",
+ *             link: "ссылка, которая отработает при нажатии",
  *             callback: function() {
- *                 callback, РєРѕС‚РѕСЂС‹Р№ РѕС‚СЂР°Р±РѕС‚Р°РµС‚ РїСЂРё РЅР°Р¶Р°С‚РёРё
+ *                 функция, который отработает при нажатии
  *             }
  *         },
  *         {
- *             title: "РўРµРєСЃС‚ РЅР° РІС‚РѕСЂРѕР№ РєРЅРѕРїРєРµ"
- * 			...
+ *             title: "Текст на второй кнопке"
+ * 			   ...
  *         }
  *     ]
  * }
- *
- * Р’РµСЂРЅРµС‚ РѕР±СЉРµРєС‚ РјРµРЅСЋ СЃ РґРІСѓРјСЏ РјРµС‚РѕРґР°РјРё Рё РѕРґРЅРёРј СЃРІРѕР№СЃС‚РІРѕРј:
- * show - РїРѕРєР°Р¶РµС‚ РјРµРЅСЋ
- * hide - СЃРєСЂРѕРµС‚ РјРµРЅСЋ
- * node - СѓРєР°Р·Р°С‚РµР»СЊ РЅР° DOM СЌР»РµРјРµРЅС‚ РјРµРЅСЋ
- *
- * РџСЂРёРјРµСЂ:
- * var myMenu = contextMenu(РґР°РЅРЅС‹Рµ_РґР»СЏ_СЃРѕР·РґР°РЅРёСЏ_РјРµРЅСЋ);
- * myMenu.show();
- * myMenu.hide();
- * myMenu.node.appendChild(DOM_СЌР»РµРјРµРЅС‚);
- *
- * РњРѕРґСѓР»СЊ С‚СЂРµР±СѓРµС‚ РЅР°Р»РёС‡РёСЏ РІ РґРѕРєСѓРјРµРЅС‚Рµ СЃР»РµРґСѓСЋС‰РµРіРѕ HTML РєРѕРґР°:
+ * 
+ * Вернет объект меню с двумя методами и одним свойством:
+ * show - покажет меню
+ * hide - скроет меню
+ * node - указатель на DOM элемент меню
+ * 
+ * Пример:
+ * var menu = contextMenu(данные_для_создания_меню);
+ * menu.show();
+ * menu.hide();
+ * menu.node.appendChild(DOM_элемент);
+ * 
+ * Модуль требует наличия в документе следующего HTML кода:
  * <div class="context_menu_table" id="context_menu_table">
  *     <div class="context_menu_tr">
  *         <div class="context_menu_td" id="context_menu_td"></div>
  *     </div>
  * </div>
- *
+ * 
  */
-
-(function(global) {
+ (function(global) {
     global = global || window;
+    global.StalinGrad = global.StalinGrad || {};
+    global.StalinGrad.module = global.StalinGrad.module || {};
+    global = global.StalinGrad.module;
 
     var module = {
         activeItem:null,
+        isShow: false,
         node:{},
         data:{},
         prefix:"context_menu_",
@@ -54,9 +57,10 @@
             var self = this;
             utils.addEvent(self.node.table, "click", function() {
                 self.hide();
-            })
+            });
         },
         hide:function(node) {
+            this.isShow = false;
             node = (node) ? node : this.node.table;
             utils.addClass(node, "hidden");
         },
@@ -67,6 +71,7 @@
             if(self.activeItem) self.hide(self.activeItem);
             utils.removeClass(node, "hidden");
             self.activeItem = node;
+            this.isShow = true;
         },
         createContainer:function(id) {
             var self = this,
@@ -109,14 +114,24 @@
 
     function menu(node) {
         this.node = node;
+        this.isShow = false;
     }
 
     menu.prototype.show = function() {
         module.show(this.node);
-    }
+    };
     menu.prototype.hide = function() {
         module.hide();
-    }
+    };
+    menu.prototype.toggle = function() {
+        if(this.isShow && module.isShow) {
+            this.isShow = false;
+            module.hide();
+        } else {
+            this.isShow = true;
+            module.show(this.node);
+        }
+    };
 
     global.contextMenu = function(data) {
         module.init();
