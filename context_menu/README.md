@@ -38,9 +38,9 @@ myMenu.node.appendChild(DOM_элемент);
 
 Модуль требует наличия в документе следующего HTML кода:
 <pre>
-<div class="context_menu_table" id="context_menu_table">
-    <div class="context_menu_tr">
-        <div class="context_menu_td" id="context_menu_td"></div>
-    </div>
-</div>
+&lt;div class="context_menu_table" id="context_menu_table">
+    &lt;div class="context_menu_tr">
+        &lt;div class="context_menu_td" id="context_menu_td">&lt;/div>
+    &lt;/div>
+&lt;/div>
 </pre>
