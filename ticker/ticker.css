@@ -1,11 +1,16 @@
 .ticker_container {
-	display: inline-block;
+    display: inline-block;
     text-align: right;
 }
 
 .ticker_item {
     display: inline-block;
-	color: #D36F00;
-	font-size: 0.8em;
-	text-align: right;
+    text-align: right;
+    padding: 2px;
+}
+
+.ticker_icon {
+    width: 1em;
+    vertical-align: middle;
+    margin: 0 5px;
 }

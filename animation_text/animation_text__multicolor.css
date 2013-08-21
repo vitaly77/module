@@ -1,0 +1,49 @@
+@font-face {
+    font-family: KarmaFuture;
+    src: url(KarmaFuture.ttf);
+}
+
+.animation_text {
+    font-family: KarmaFuture;
+    font-size: 1.5em;
+}
+
+.animation_text span:nth-child(10n + 1) {
+    color: red;
+}
+
+.animation_text span:nth-child(10n + 2) {
+    color: blue;
+}
+
+.animation_text span:nth-child(10n + 3) {
+    color: #ff7f50;
+}
+
+.animation_text span:nth-child(10n + 4) {
+    color: green;
+}
+
+.animation_text span:nth-child(10n + 5) {
+    color: teal;
+}
+
+.animation_text span:nth-child(10n + 6) {
+    color: #daa520;
+}
+
+.animation_text span:nth-child(10n + 7) {
+    color: #c71585;
+}
+
+.animation_text span:nth-child(10n + 8) {
+    color: #cd853f;
+}
+
+.animation_text span:nth-child(10n + 9) {
+    color: #191970;
+}
+
+.animation_text span:nth-child(10n + 10) {
+    color: #ff1493;
+}

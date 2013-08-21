@@ -36,6 +36,7 @@
     global = global || window;
     global.StalinGrad = global.StalinGrad || {};
     global.StalinGrad.module = global.StalinGrad.module || {};
+	var utils = global.StalinGrad.utils; 
     global = global.StalinGrad.module;
 
     var module = {
@@ -90,6 +91,7 @@
             } else self.stack.push(data);
 
             self.replaceView(data.node, "item", "item__hidden");
+            data.node.focus();
             if (!self.isShow) self.replaceView(self.node.table, "table", "table__hidden");
             self.isShow = true;
         },
@@ -129,16 +131,26 @@
         var self = this;
         self.id = data.id;
         self.node = data.node;
+        self.isShow = false;
     }
 
     popup.prototype.show = function () {
+        this.isShow = true;
         module.show({
             id:this.id,
             node:this.node
         });
     };
     popup.prototype.hide = function () {
+        this.isShow = false;
         module.hide({
+            id:this.id,
+            node:this.node
+        });
+    };
+    popup.prototype.toggle = function () {
+        var type = (this.isShow) ? "hide" : "show";
+        module[type]({
             id:this.id,
             node:this.node
         });

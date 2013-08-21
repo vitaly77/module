@@ -5,10 +5,13 @@
 .popup_window_item {
     color: black;
     background: rgba(255, 255, 255, 0.9);
-    box-shadow: 1px 1px 5px #666;
+    box-shadow: 0 0 15px white;
 
     -webkit-border-radius: 0.5em;
     -moz-border-radius: 0.5em;
     border-radius: 0.5em;
 }
 
+.popup_window_item_close {
+    color: #777;
+}

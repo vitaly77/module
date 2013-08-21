@@ -1,0 +1,51 @@
+﻿.information_table_table {
+    width: 100%;
+}
+
+.information_table_tr,
+.information_table_tr__blue,
+.information_table_tr__red {
+    -webkit-transition: background-color 0.5s;
+    -ms-transition: background-color 0.5s;
+    -o-transition: background-color 0.5s;
+    -moz-transition: background-color 0.5s;
+    transition: background-color 0.5s;
+}
+
+.information_table_param {
+    text-align: right;
+    padding-right: 1em;
+}
+
+.information_table_first {
+    text-align: left;
+    padding-left: 1em;
+}
+
+.information_table_td,
+.information_table_first,
+.information_table_param {
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
+}
+
+.information_table_tr__grey {
+    background: #DDD;
+}
+
+.information_table_tr__blue {
+    background: #B4D8FB;
+}
+
+.information_table_tr__red {
+    background: #FBC2C2;
+}
+
+.information_table_tr:hover,
+.information_table_tr__blue:hover {
+    background: #94FFB6;
+}
+
+.information_table_tr__red:hover {
+    background: #FF9090;
+}

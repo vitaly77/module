@@ -20,11 +20,12 @@
 }
 
 .popup_window_item {
+    display: inline-table;
     position: relative;
     margin: 0.5em auto;
     width: 100%;
     max-width: 10em;
-    padding: 1em 2em;
+    padding: 2em;
     text-align: center;
 }
 
